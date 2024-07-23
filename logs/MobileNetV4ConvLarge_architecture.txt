@@ -1,0 +1,623 @@
+
+==================================================
+Model: MobileNetV4ConvLarge
+==================================================
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1        [128, 24, 191, 191]             648
+       BatchNorm2d-2        [128, 24, 191, 191]              48
+              ReLU-3        [128, 24, 191, 191]               0
+     Conv2DBNBlock-4        [128, 24, 191, 191]               0
+            Conv2d-5          [128, 96, 96, 96]          20,736
+       BatchNorm2d-6          [128, 96, 96, 96]             192
+              ReLU-7          [128, 96, 96, 96]               0
+            Conv2d-8          [128, 48, 96, 96]           4,608
+       BatchNorm2d-9          [128, 48, 96, 96]              96
+FusedInvertedBottleneckBlock-10          [128, 48, 96, 96]               0
+           Conv2d-11          [128, 48, 96, 96]             432
+      BatchNorm2d-12          [128, 48, 96, 96]              96
+           Conv2d-13         [128, 192, 96, 96]           9,216
+      BatchNorm2d-14         [128, 192, 96, 96]             384
+             ReLU-15         [128, 192, 96, 96]               0
+           Conv2d-16         [128, 192, 48, 48]           4,800
+      BatchNorm2d-17         [128, 192, 48, 48]             384
+             ReLU-18         [128, 192, 48, 48]               0
+           Conv2d-19          [128, 96, 48, 48]          18,432
+      BatchNorm2d-20          [128, 96, 48, 48]             192
+   MNV4LayerScale-21          [128, 96, 48, 48]               0
+UniversalInvertedBottleneckBlock-22          [128, 96, 48, 48]               0
+           Conv2d-23          [128, 96, 48, 48]             864
+      BatchNorm2d-24          [128, 96, 48, 48]             192
+           Conv2d-25         [128, 384, 48, 48]          36,864
+      BatchNorm2d-26         [128, 384, 48, 48]             768
+             ReLU-27         [128, 384, 48, 48]               0
+           Conv2d-28         [128, 384, 48, 48]           3,456
+      BatchNorm2d-29         [128, 384, 48, 48]             768
+             ReLU-30         [128, 384, 48, 48]               0
+           Conv2d-31          [128, 96, 48, 48]          36,864
+      BatchNorm2d-32          [128, 96, 48, 48]             192
+   MNV4LayerScale-33          [128, 96, 48, 48]               0
+UniversalInvertedBottleneckBlock-34          [128, 96, 48, 48]               0
+           Conv2d-35          [128, 96, 48, 48]             864
+      BatchNorm2d-36          [128, 96, 48, 48]             192
+           Conv2d-37         [128, 384, 48, 48]          36,864
+      BatchNorm2d-38         [128, 384, 48, 48]             768
+             ReLU-39         [128, 384, 48, 48]               0
+           Conv2d-40         [128, 384, 24, 24]           9,600
+      BatchNorm2d-41         [128, 384, 24, 24]             768
+             ReLU-42         [128, 384, 24, 24]               0
+           Conv2d-43         [128, 192, 24, 24]          73,728
+      BatchNorm2d-44         [128, 192, 24, 24]             384
+   MNV4LayerScale-45         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-46         [128, 192, 24, 24]               0
+           Conv2d-47         [128, 192, 24, 24]           1,728
+      BatchNorm2d-48         [128, 192, 24, 24]             384
+           Conv2d-49         [128, 768, 24, 24]         147,456
+      BatchNorm2d-50         [128, 768, 24, 24]           1,536
+             ReLU-51         [128, 768, 24, 24]               0
+           Conv2d-52         [128, 768, 24, 24]           6,912
+      BatchNorm2d-53         [128, 768, 24, 24]           1,536
+             ReLU-54         [128, 768, 24, 24]               0
+           Conv2d-55         [128, 192, 24, 24]         147,456
+      BatchNorm2d-56         [128, 192, 24, 24]             384
+   MNV4LayerScale-57         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-58         [128, 192, 24, 24]               0
+           Conv2d-59         [128, 192, 24, 24]           1,728
+      BatchNorm2d-60         [128, 192, 24, 24]             384
+           Conv2d-61         [128, 768, 24, 24]         147,456
+      BatchNorm2d-62         [128, 768, 24, 24]           1,536
+             ReLU-63         [128, 768, 24, 24]               0
+           Conv2d-64         [128, 768, 24, 24]           6,912
+      BatchNorm2d-65         [128, 768, 24, 24]           1,536
+             ReLU-66         [128, 768, 24, 24]               0
+           Conv2d-67         [128, 192, 24, 24]         147,456
+      BatchNorm2d-68         [128, 192, 24, 24]             384
+   MNV4LayerScale-69         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-70         [128, 192, 24, 24]               0
+           Conv2d-71         [128, 192, 24, 24]           1,728
+      BatchNorm2d-72         [128, 192, 24, 24]             384
+           Conv2d-73         [128, 768, 24, 24]         147,456
+      BatchNorm2d-74         [128, 768, 24, 24]           1,536
+             ReLU-75         [128, 768, 24, 24]               0
+           Conv2d-76         [128, 768, 24, 24]           6,912
+      BatchNorm2d-77         [128, 768, 24, 24]           1,536
+             ReLU-78         [128, 768, 24, 24]               0
+           Conv2d-79         [128, 192, 24, 24]         147,456
+      BatchNorm2d-80         [128, 192, 24, 24]             384
+   MNV4LayerScale-81         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-82         [128, 192, 24, 24]               0
+           Conv2d-83         [128, 192, 24, 24]           1,728
+      BatchNorm2d-84         [128, 192, 24, 24]             384
+           Conv2d-85         [128, 768, 24, 24]         147,456
+      BatchNorm2d-86         [128, 768, 24, 24]           1,536
+             ReLU-87         [128, 768, 24, 24]               0
+           Conv2d-88         [128, 768, 24, 24]          19,200
+      BatchNorm2d-89         [128, 768, 24, 24]           1,536
+             ReLU-90         [128, 768, 24, 24]               0
+           Conv2d-91         [128, 192, 24, 24]         147,456
+      BatchNorm2d-92         [128, 192, 24, 24]             384
+   MNV4LayerScale-93         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-94         [128, 192, 24, 24]               0
+           Conv2d-95         [128, 192, 24, 24]           4,800
+      BatchNorm2d-96         [128, 192, 24, 24]             384
+           Conv2d-97         [128, 768, 24, 24]         147,456
+      BatchNorm2d-98         [128, 768, 24, 24]           1,536
+             ReLU-99         [128, 768, 24, 24]               0
+          Conv2d-100         [128, 768, 24, 24]           6,912
+     BatchNorm2d-101         [128, 768, 24, 24]           1,536
+            ReLU-102         [128, 768, 24, 24]               0
+          Conv2d-103         [128, 192, 24, 24]         147,456
+     BatchNorm2d-104         [128, 192, 24, 24]             384
+  MNV4LayerScale-105         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-106         [128, 192, 24, 24]               0
+          Conv2d-107         [128, 192, 24, 24]           4,800
+     BatchNorm2d-108         [128, 192, 24, 24]             384
+          Conv2d-109         [128, 768, 24, 24]         147,456
+     BatchNorm2d-110         [128, 768, 24, 24]           1,536
+            ReLU-111         [128, 768, 24, 24]               0
+          Conv2d-112         [128, 768, 24, 24]           6,912
+     BatchNorm2d-113         [128, 768, 24, 24]           1,536
+            ReLU-114         [128, 768, 24, 24]               0
+          Conv2d-115         [128, 192, 24, 24]         147,456
+     BatchNorm2d-116         [128, 192, 24, 24]             384
+  MNV4LayerScale-117         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-118         [128, 192, 24, 24]               0
+          Conv2d-119         [128, 192, 24, 24]           4,800
+     BatchNorm2d-120         [128, 192, 24, 24]             384
+          Conv2d-121         [128, 768, 24, 24]         147,456
+     BatchNorm2d-122         [128, 768, 24, 24]           1,536
+            ReLU-123         [128, 768, 24, 24]               0
+          Conv2d-124         [128, 768, 24, 24]           6,912
+     BatchNorm2d-125         [128, 768, 24, 24]           1,536
+            ReLU-126         [128, 768, 24, 24]               0
+          Conv2d-127         [128, 192, 24, 24]         147,456
+     BatchNorm2d-128         [128, 192, 24, 24]             384
+  MNV4LayerScale-129         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-130         [128, 192, 24, 24]               0
+          Conv2d-131         [128, 192, 24, 24]           4,800
+     BatchNorm2d-132         [128, 192, 24, 24]             384
+          Conv2d-133         [128, 768, 24, 24]         147,456
+     BatchNorm2d-134         [128, 768, 24, 24]           1,536
+            ReLU-135         [128, 768, 24, 24]               0
+          Conv2d-136         [128, 768, 24, 24]           6,912
+     BatchNorm2d-137         [128, 768, 24, 24]           1,536
+            ReLU-138         [128, 768, 24, 24]               0
+          Conv2d-139         [128, 192, 24, 24]         147,456
+     BatchNorm2d-140         [128, 192, 24, 24]             384
+  MNV4LayerScale-141         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-142         [128, 192, 24, 24]               0
+          Conv2d-143         [128, 192, 24, 24]           4,800
+     BatchNorm2d-144         [128, 192, 24, 24]             384
+          Conv2d-145         [128, 768, 24, 24]         147,456
+     BatchNorm2d-146         [128, 768, 24, 24]           1,536
+            ReLU-147         [128, 768, 24, 24]               0
+          Conv2d-148         [128, 768, 24, 24]           6,912
+     BatchNorm2d-149         [128, 768, 24, 24]           1,536
+            ReLU-150         [128, 768, 24, 24]               0
+          Conv2d-151         [128, 192, 24, 24]         147,456
+     BatchNorm2d-152         [128, 192, 24, 24]             384
+  MNV4LayerScale-153         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-154         [128, 192, 24, 24]               0
+          Conv2d-155         [128, 192, 24, 24]           1,728
+     BatchNorm2d-156         [128, 192, 24, 24]             384
+          Conv2d-157         [128, 768, 24, 24]         147,456
+     BatchNorm2d-158         [128, 768, 24, 24]           1,536
+            ReLU-159         [128, 768, 24, 24]               0
+          Conv2d-160         [128, 192, 24, 24]         147,456
+     BatchNorm2d-161         [128, 192, 24, 24]             384
+  MNV4LayerScale-162         [128, 192, 24, 24]               0
+UniversalInvertedBottleneckBlock-163         [128, 192, 24, 24]               0
+          Conv2d-164         [128, 192, 24, 24]           4,800
+     BatchNorm2d-165         [128, 192, 24, 24]             384
+          Conv2d-166         [128, 768, 24, 24]         147,456
+     BatchNorm2d-167         [128, 768, 24, 24]           1,536
+            ReLU-168         [128, 768, 24, 24]               0
+          Conv2d-169         [128, 768, 12, 12]          19,200
+     BatchNorm2d-170         [128, 768, 12, 12]           1,536
+            ReLU-171         [128, 768, 12, 12]               0
+          Conv2d-172         [128, 512, 12, 12]         393,216
+     BatchNorm2d-173         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-174         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-175         [128, 512, 12, 12]               0
+          Conv2d-176         [128, 512, 12, 12]          12,800
+     BatchNorm2d-177         [128, 512, 12, 12]           1,024
+          Conv2d-178        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-179        [128, 2048, 12, 12]           4,096
+            ReLU-180        [128, 2048, 12, 12]               0
+          Conv2d-181        [128, 2048, 12, 12]          51,200
+     BatchNorm2d-182        [128, 2048, 12, 12]           4,096
+            ReLU-183        [128, 2048, 12, 12]               0
+          Conv2d-184         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-185         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-186         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-187         [128, 512, 12, 12]               0
+          Conv2d-188         [128, 512, 12, 12]          12,800
+     BatchNorm2d-189         [128, 512, 12, 12]           1,024
+          Conv2d-190        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-191        [128, 2048, 12, 12]           4,096
+            ReLU-192        [128, 2048, 12, 12]               0
+          Conv2d-193        [128, 2048, 12, 12]          51,200
+     BatchNorm2d-194        [128, 2048, 12, 12]           4,096
+            ReLU-195        [128, 2048, 12, 12]               0
+          Conv2d-196         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-197         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-198         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-199         [128, 512, 12, 12]               0
+          Conv2d-200         [128, 512, 12, 12]          12,800
+     BatchNorm2d-201         [128, 512, 12, 12]           1,024
+          Conv2d-202        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-203        [128, 2048, 12, 12]           4,096
+            ReLU-204        [128, 2048, 12, 12]               0
+          Conv2d-205        [128, 2048, 12, 12]          51,200
+     BatchNorm2d-206        [128, 2048, 12, 12]           4,096
+            ReLU-207        [128, 2048, 12, 12]               0
+          Conv2d-208         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-209         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-210         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-211         [128, 512, 12, 12]               0
+          Conv2d-212         [128, 512, 12, 12]          12,800
+     BatchNorm2d-213         [128, 512, 12, 12]           1,024
+          Conv2d-214        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-215        [128, 2048, 12, 12]           4,096
+            ReLU-216        [128, 2048, 12, 12]               0
+          Conv2d-217         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-218         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-219         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-220         [128, 512, 12, 12]               0
+          Conv2d-221         [128, 512, 12, 12]          12,800
+     BatchNorm2d-222         [128, 512, 12, 12]           1,024
+          Conv2d-223        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-224        [128, 2048, 12, 12]           4,096
+            ReLU-225        [128, 2048, 12, 12]               0
+          Conv2d-226        [128, 2048, 12, 12]          18,432
+     BatchNorm2d-227        [128, 2048, 12, 12]           4,096
+            ReLU-228        [128, 2048, 12, 12]               0
+          Conv2d-229         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-230         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-231         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-232         [128, 512, 12, 12]               0
+          Conv2d-233         [128, 512, 12, 12]          12,800
+     BatchNorm2d-234         [128, 512, 12, 12]           1,024
+          Conv2d-235        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-236        [128, 2048, 12, 12]           4,096
+            ReLU-237        [128, 2048, 12, 12]               0
+          Conv2d-238         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-239         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-240         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-241         [128, 512, 12, 12]               0
+          Conv2d-242         [128, 512, 12, 12]          12,800
+     BatchNorm2d-243         [128, 512, 12, 12]           1,024
+          Conv2d-244        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-245        [128, 2048, 12, 12]           4,096
+            ReLU-246        [128, 2048, 12, 12]               0
+          Conv2d-247         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-248         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-249         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-250         [128, 512, 12, 12]               0
+          Conv2d-251         [128, 512, 12, 12]          12,800
+     BatchNorm2d-252         [128, 512, 12, 12]           1,024
+          Conv2d-253        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-254        [128, 2048, 12, 12]           4,096
+            ReLU-255        [128, 2048, 12, 12]               0
+          Conv2d-256        [128, 2048, 12, 12]          18,432
+     BatchNorm2d-257        [128, 2048, 12, 12]           4,096
+            ReLU-258        [128, 2048, 12, 12]               0
+          Conv2d-259         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-260         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-261         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-262         [128, 512, 12, 12]               0
+          Conv2d-263         [128, 512, 12, 12]          12,800
+     BatchNorm2d-264         [128, 512, 12, 12]           1,024
+          Conv2d-265        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-266        [128, 2048, 12, 12]           4,096
+            ReLU-267        [128, 2048, 12, 12]               0
+          Conv2d-268        [128, 2048, 12, 12]          51,200
+     BatchNorm2d-269        [128, 2048, 12, 12]           4,096
+            ReLU-270        [128, 2048, 12, 12]               0
+          Conv2d-271         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-272         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-273         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-274         [128, 512, 12, 12]               0
+          Conv2d-275         [128, 512, 12, 12]          12,800
+     BatchNorm2d-276         [128, 512, 12, 12]           1,024
+          Conv2d-277        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-278        [128, 2048, 12, 12]           4,096
+            ReLU-279        [128, 2048, 12, 12]               0
+          Conv2d-280         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-281         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-282         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-283         [128, 512, 12, 12]               0
+          Conv2d-284         [128, 512, 12, 12]          12,800
+     BatchNorm2d-285         [128, 512, 12, 12]           1,024
+          Conv2d-286        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-287        [128, 2048, 12, 12]           4,096
+            ReLU-288        [128, 2048, 12, 12]               0
+          Conv2d-289         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-290         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-291         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-292         [128, 512, 12, 12]               0
+          Conv2d-293         [128, 512, 12, 12]          12,800
+     BatchNorm2d-294         [128, 512, 12, 12]           1,024
+          Conv2d-295        [128, 2048, 12, 12]       1,048,576
+     BatchNorm2d-296        [128, 2048, 12, 12]           4,096
+            ReLU-297        [128, 2048, 12, 12]               0
+          Conv2d-298         [128, 512, 12, 12]       1,048,576
+     BatchNorm2d-299         [128, 512, 12, 12]           1,024
+  MNV4LayerScale-300         [128, 512, 12, 12]               0
+UniversalInvertedBottleneckBlock-301         [128, 512, 12, 12]               0
+          Conv2d-302         [128, 960, 12, 12]         491,520
+     BatchNorm2d-303         [128, 960, 12, 12]           1,920
+            ReLU-304         [128, 960, 12, 12]               0
+   Conv2DBNBlock-305         [128, 960, 12, 12]               0
+AdaptiveAvgPool2d-306           [128, 960, 1, 1]               0
+GlobalPoolingBlock-307           [128, 960, 1, 1]               0
+          Conv2d-308          [128, 1280, 1, 1]       1,228,800
+     BatchNorm2d-309          [128, 1280, 1, 1]           2,560
+            ReLU-310          [128, 1280, 1, 1]               0
+   Conv2DBNBlock-311          [128, 1280, 1, 1]               0
+       MobileNet-312          [128, 1280, 1, 1]               0
+         Flatten-313                [128, 1280]               0
+          Linear-314                [128, 1024]       1,311,744
+            ReLU-315                [128, 1024]               0
+          Linear-316                [128, 1000]       1,025,000
+================================================================
+Total params: 33,646,608
+Trainable params: 33,646,608
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 216.00
+Forward/backward pass size (MB): 80616.45
+Params size (MB): 128.35
+Estimated Total Size (MB): 80960.80
+----------------------------------------------------------------
+
+Detailed layer shapes:
+features.layers.0.conv: torch.Size([128, 24, 191, 191])
+features.layers.0.bn: torch.Size([128, 24, 191, 191])
+features.layers.0.activation_layer: torch.Size([128, 24, 191, 191])
+features.layers.1.fused_conv: torch.Size([128, 96, 96, 96])
+features.layers.1.fused_bn: torch.Size([128, 96, 96, 96])
+features.layers.1.fused_act: torch.Size([128, 96, 96, 96])
+features.layers.1.project_conv: torch.Size([128, 48, 96, 96])
+features.layers.1.project_bn: torch.Size([128, 48, 96, 96])
+features.layers.2.layers.0: torch.Size([128, 48, 96, 96])
+features.layers.2.layers.1: torch.Size([128, 48, 96, 96])
+features.layers.2.layers.2: torch.Size([128, 192, 96, 96])
+features.layers.2.layers.3: torch.Size([128, 192, 96, 96])
+features.layers.2.layers.4: torch.Size([128, 192, 96, 96])
+features.layers.2.layers.5: torch.Size([128, 192, 48, 48])
+features.layers.2.layers.6: torch.Size([128, 192, 48, 48])
+features.layers.2.layers.7: torch.Size([128, 192, 48, 48])
+features.layers.2.layers.8: torch.Size([128, 96, 48, 48])
+features.layers.2.layers.9: torch.Size([128, 96, 48, 48])
+features.layers.2.layer_scale: torch.Size([128, 96, 48, 48])
+features.layers.3.layers.0: torch.Size([128, 96, 48, 48])
+features.layers.3.layers.1: torch.Size([128, 96, 48, 48])
+features.layers.3.layers.2: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.3: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.4: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.5: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.6: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.7: torch.Size([128, 384, 48, 48])
+features.layers.3.layers.8: torch.Size([128, 96, 48, 48])
+features.layers.3.layers.9: torch.Size([128, 96, 48, 48])
+features.layers.3.layer_scale: torch.Size([128, 96, 48, 48])
+features.layers.4.layers.0: torch.Size([128, 96, 48, 48])
+features.layers.4.layers.1: torch.Size([128, 96, 48, 48])
+features.layers.4.layers.2: torch.Size([128, 384, 48, 48])
+features.layers.4.layers.3: torch.Size([128, 384, 48, 48])
+features.layers.4.layers.4: torch.Size([128, 384, 48, 48])
+features.layers.4.layers.5: torch.Size([128, 384, 24, 24])
+features.layers.4.layers.6: torch.Size([128, 384, 24, 24])
+features.layers.4.layers.7: torch.Size([128, 384, 24, 24])
+features.layers.4.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.4.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.4.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.5.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.5.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.5.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.5.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.5.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.5.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.6.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.6.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.6.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.6.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.6.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.6.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.7.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.7.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.7.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.7.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.7.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.7.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.8.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.8.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.8.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.8.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.8.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.8.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.9.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.9.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.9.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.9.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.9.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.9.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.10.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.10.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.10.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.10.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.10.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.10.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.11.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.11.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.11.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.11.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.11.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.11.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.12.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.12.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.12.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.12.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.12.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.12.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.13.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.13.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.13.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.5: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.6: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.7: torch.Size([128, 768, 24, 24])
+features.layers.13.layers.8: torch.Size([128, 192, 24, 24])
+features.layers.13.layers.9: torch.Size([128, 192, 24, 24])
+features.layers.13.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.14.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.14.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.14.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.14.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.14.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.14.layers.5: torch.Size([128, 192, 24, 24])
+features.layers.14.layers.6: torch.Size([128, 192, 24, 24])
+features.layers.14.layer_scale: torch.Size([128, 192, 24, 24])
+features.layers.15.layers.0: torch.Size([128, 192, 24, 24])
+features.layers.15.layers.1: torch.Size([128, 192, 24, 24])
+features.layers.15.layers.2: torch.Size([128, 768, 24, 24])
+features.layers.15.layers.3: torch.Size([128, 768, 24, 24])
+features.layers.15.layers.4: torch.Size([128, 768, 24, 24])
+features.layers.15.layers.5: torch.Size([128, 768, 12, 12])
+features.layers.15.layers.6: torch.Size([128, 768, 12, 12])
+features.layers.15.layers.7: torch.Size([128, 768, 12, 12])
+features.layers.15.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.15.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.15.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.16.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.16.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.16.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.16.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.16.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.16.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.17.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.17.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.17.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.17.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.17.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.17.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.18.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.18.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.18.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.18.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.18.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.18.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.19.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.19.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.19.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.19.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.19.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.19.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.19.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.19.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.20.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.20.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.20.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.20.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.20.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.20.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.21.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.21.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.21.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.21.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.21.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.21.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.21.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.21.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.22.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.22.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.22.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.22.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.22.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.22.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.22.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.22.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.23.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.23.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.23.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.23.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.23.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.23.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.24.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.24.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.24.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.5: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.6: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.7: torch.Size([128, 2048, 12, 12])
+features.layers.24.layers.8: torch.Size([128, 512, 12, 12])
+features.layers.24.layers.9: torch.Size([128, 512, 12, 12])
+features.layers.24.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.25.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.25.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.25.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.25.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.25.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.25.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.25.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.25.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.26.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.26.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.26.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.26.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.26.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.26.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.26.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.26.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.27.layers.0: torch.Size([128, 512, 12, 12])
+features.layers.27.layers.1: torch.Size([128, 512, 12, 12])
+features.layers.27.layers.2: torch.Size([128, 2048, 12, 12])
+features.layers.27.layers.3: torch.Size([128, 2048, 12, 12])
+features.layers.27.layers.4: torch.Size([128, 2048, 12, 12])
+features.layers.27.layers.5: torch.Size([128, 512, 12, 12])
+features.layers.27.layers.6: torch.Size([128, 512, 12, 12])
+features.layers.27.layer_scale: torch.Size([128, 512, 12, 12])
+features.layers.28.conv: torch.Size([128, 960, 12, 12])
+features.layers.28.bn: torch.Size([128, 960, 12, 12])
+features.layers.28.activation_layer: torch.Size([128, 960, 12, 12])
+features.layers.29.pool: torch.Size([128, 960, 1, 1])
+features.layers.30.conv: torch.Size([128, 1280, 1, 1])
+features.layers.30.bn: torch.Size([128, 1280, 1, 1])
+features.layers.30.activation_layer: torch.Size([128, 1280, 1, 1])
+classifier.0: torch.Size([128, 1280])
+classifier.1: torch.Size([128, 1024])
+classifier.2: torch.Size([128, 1024])
+classifier.3: torch.Size([128, 1000])
+
+Final output shape: torch.Size([128, 1000])
+==================================================
+
