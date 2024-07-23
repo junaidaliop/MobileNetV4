@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from MobileNetv4 import build_mobilenet
+from MobileNetV4 import build_mobilenet
 from torchsummary import summary
 import sys
 import os
