@@ -1,25 +1,14 @@
 # MobileNetV4-PyTorch
 
 ## Overview
-This repository provides a PyTorch replication of the MobileNetV4 architecture as described in the paper ["MobileNetV4: Universal Models for the Mobile Ecosystem"](https://arxiv.org/pdf/2404.10518v1). The implementation aims to mimic the architecture closely for all five variants: MobileNetV4ConvSmall, MobileNetV4ConvMedium, MobileNetV4ConvLarge, MobileNetV4HybridMedium, and MobileNetV4HybridLarge.
+This repository provides a PyTorch replication of the MobileNetV4 architecture as described in the paper ["MobileNetV4: Universal Models for the Mobile Ecosystem"](https://arxiv.org/pdf/2404.10518v1). The implementation aims to mimic the architecture closely for all five variants:
+- MobileNetV4ConvSmall
+- MobileNetV4ConvMedium
+- MobileNetV4ConvLarge
+- MobileNetV4HybridMedium
+- MobileNetV4HybridLarge
 
 ## Repository Structure
-```
-.
-├── env
-│   └── MobileNetV4_env.yml
-├── logs
-│   ├── MobileNetV4ConvLarge_architecture.txt
-│   ├── MobileNetV4ConvMedium_architecture.txt
-│   ├── MobileNetV4ConvSmall_architecture.txt
-│   ├── MobileNetV4HybridLarge_architecture.txt
-│   └── MobileNetV4HybridMedium_architecture.txt
-├── MobileNetV4.py
-├── nn_blocks.py
-├── paper
-│   └── 2404.10518v1.pdf
-└── test.py
-```
 - **env/**: Contains the environment YAML file to set up the necessary dependencies.
 - **logs/**: Contains the architecture details of the different MobileNetV4 variants.
 - **paper/**: Contains the original MobileNetV4 paper for reference.
