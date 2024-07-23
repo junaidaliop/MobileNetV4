@@ -470,4 +470,4 @@ dependencies:
       - wandb==0.17.4
       - werkzeug==3.0.3
       - wrapt==1.16.0
-prefix: /home/efreet/anaconda3/envs/m4-mux
+prefix: /home/efreet/anaconda3/envs/MobileNetV4-PyTorch
