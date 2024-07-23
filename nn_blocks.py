@@ -386,6 +386,7 @@ class MultiHeadSelfAttentionBlock(nn.Module):
             self.stochastic_depth = None
 
     def forward(self, inputs):
+        device = inputs.device
         x = inputs
         if self.use_cpe:
             x = self.cpe_dw_conv(x) + inputs
@@ -407,10 +408,12 @@ class MultiHeadSelfAttentionBlock(nn.Module):
             x = self.output_proj(x)
 
         if self.use_layer_scale:
+            self.layer_scale = self.layer_scale.to(device) 
             x = self.layer_scale(x)
 
         if self.use_residual:
             if self.stochastic_depth:
+                self.stochastic_depth = self.stochastic_depth.to(device)
                 x = self.stochastic_depth(x)
             if self.input_dim == self.output_dim:
                 x = x + shortcut
@@ -430,13 +433,13 @@ class MNV4LayerScale(nn.Module):
         self.init_value = init_value
         self.gamma = None
 
-    def build(self, input_shape):
+    def build(self, input_shape, device):
         embedding_dim = input_shape[-1]
-        self.gamma = nn.Parameter(self.init_value * torch.ones(embedding_dim))
+        self.gamma = nn.Parameter(self.init_value * torch.ones(embedding_dim).to(device))
 
     def forward(self, x):
         if self.gamma is None:
-            self.build(x.shape)
+            self.build(x.shape, x.device)
         return x * self.gamma
 
 class UniversalInvertedBottleneckBlock(nn.Module):
@@ -545,13 +548,16 @@ class UniversalInvertedBottleneckBlock(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         shortcut = x
+        device = x.device
         x = self.layers(x)
 
         if self.layer_scale is not None:
+            self.layer_scale = self.layer_scale.to(device)
             x = self.layer_scale(x)
 
         if self.use_residual and self.in_channels == self.out_channels and self.stride == 1:
             if self.stochastic_depth is not None:
+                self.stochastic_depth = self.stochastic_depth.to(device)
                 x = self.stochastic_depth(x, self.training)
             x = x + shortcut
 
