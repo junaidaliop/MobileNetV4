@@ -88,3 +88,9 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 
 ## Star the Repository
 If you find this repository useful, please consider giving it a star!
+
+## Acknowledgment
+
+This is an unofficial implementation of MobileNetV4 in PyTorch. To the best of my ability, I believe this is the closest implementation to the original work found at [TensorFlow MobileNetV4 Implementation](https://github.com/tensorflow/models/blob/master/official/vision/modeling/backbones/mobilenet.py).
+
+For the official TensorFlow implementation, please visit: [TensorFlow MobileNetV4 Implementation](https://github.com/tensorflow/models/blob/master/official/vision/modeling/backbones/mobilenet.py).
