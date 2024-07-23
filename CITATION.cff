@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as follows."
+authors:
+  - family-names: RAJA
+    given-names: Muhammad Junaid Ali Asif
+    orcid: "https://orcid.org/0009-0008-9249-9983"
+title: "MobileNetV4-PyTorch"
+abstract: "A PyTorch implementation of MobileNetV4: Universal Models for the Mobile Ecosystem."
+version: 1.0.0
+date-released: 2024-07-23
+url: "https://github.com/junaidaliop/MobileNetV4"
+keywords: 
+  - MobileNetV4
+  - PyTorch
+  - deep learning
+  - computer vision
