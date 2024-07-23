@@ -64,6 +64,20 @@ If you find this work useful, please cite the original MobileNetV4 paper:
   year={2024}
 }
 ```
+If you use this work, please cite it as follows:
+```bibtex
+@misc{MobileNetV4-PyTorch,
+  author = {Muhammad Junaid Ali Asif Raja},
+  title = {MobileNetV4-PyTorch},
+  year = {2024},
+  url = {https://github.com/junaidaliop/MobileNetV4},
+  note = {Version 1.0.0}
+}
+```
+
+## Contact
+For research collaborations or any queries, please email me at [muhammadjunaidaliasifraja@gmail.com](mailto:muhammadjunaidaliasifraja@gmail.com)
+```
 
 ## Contributions
 Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
