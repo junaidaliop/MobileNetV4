@@ -5,7 +5,6 @@ from torchsummary import summary
 import sys
 import os
 
-## BATCH_SIZE = 2 FOR SMALL.
 BATCH_SIZE = 128
 
 class MobileNetV4WithClassifier(nn.Module):
