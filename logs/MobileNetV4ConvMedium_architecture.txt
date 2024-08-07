@@ -19,10 +19,10 @@ FusedInvertedBottleneckBlock-10          [128, 48, 64, 64]               0
       BatchNorm2d-12          [128, 48, 64, 64]              96
            Conv2d-13         [128, 192, 64, 64]           9,216
       BatchNorm2d-14         [128, 192, 64, 64]             384
-             ReLU-15         [128, 192, 64, 64]               0
+            ReLU6-15         [128, 192, 64, 64]               0
            Conv2d-16         [128, 192, 32, 32]           4,800
       BatchNorm2d-17         [128, 192, 32, 32]             384
-             ReLU-18         [128, 192, 32, 32]               0
+            ReLU6-18         [128, 192, 32, 32]               0
            Conv2d-19          [128, 80, 32, 32]          15,360
       BatchNorm2d-20          [128, 80, 32, 32]             160
 UniversalInvertedBottleneckBlock-21          [128, 80, 32, 32]               0
@@ -30,10 +30,10 @@ UniversalInvertedBottleneckBlock-21          [128, 80, 32, 32]               0
       BatchNorm2d-23          [128, 80, 32, 32]             160
            Conv2d-24         [128, 160, 32, 32]          12,800
       BatchNorm2d-25         [128, 160, 32, 32]             320
-             ReLU-26         [128, 160, 32, 32]               0
+            ReLU6-26         [128, 160, 32, 32]               0
            Conv2d-27         [128, 160, 32, 32]           1,440
       BatchNorm2d-28         [128, 160, 32, 32]             320
-             ReLU-29         [128, 160, 32, 32]               0
+            ReLU6-29         [128, 160, 32, 32]               0
            Conv2d-30          [128, 80, 32, 32]          12,800
       BatchNorm2d-31          [128, 80, 32, 32]             160
 UniversalInvertedBottleneckBlock-32          [128, 80, 32, 32]               0
@@ -41,10 +41,10 @@ UniversalInvertedBottleneckBlock-32          [128, 80, 32, 32]               0
       BatchNorm2d-34          [128, 80, 32, 32]             160
            Conv2d-35         [128, 480, 32, 32]          38,400
       BatchNorm2d-36         [128, 480, 32, 32]             960
-             ReLU-37         [128, 480, 32, 32]               0
+            ReLU6-37         [128, 480, 32, 32]               0
            Conv2d-38         [128, 480, 16, 16]          12,000
       BatchNorm2d-39         [128, 480, 16, 16]             960
-             ReLU-40         [128, 480, 16, 16]               0
+            ReLU6-40         [128, 480, 16, 16]               0
            Conv2d-41         [128, 160, 16, 16]          76,800
       BatchNorm2d-42         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-43         [128, 160, 16, 16]               0
@@ -52,10 +52,10 @@ UniversalInvertedBottleneckBlock-43         [128, 160, 16, 16]               0
       BatchNorm2d-45         [128, 160, 16, 16]             320
            Conv2d-46         [128, 640, 16, 16]         102,400
       BatchNorm2d-47         [128, 640, 16, 16]           1,280
-             ReLU-48         [128, 640, 16, 16]               0
+            ReLU6-48         [128, 640, 16, 16]               0
            Conv2d-49         [128, 640, 16, 16]           5,760
       BatchNorm2d-50         [128, 640, 16, 16]           1,280
-             ReLU-51         [128, 640, 16, 16]               0
+            ReLU6-51         [128, 640, 16, 16]               0
            Conv2d-52         [128, 160, 16, 16]         102,400
       BatchNorm2d-53         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-54         [128, 160, 16, 16]               0
@@ -63,10 +63,10 @@ UniversalInvertedBottleneckBlock-54         [128, 160, 16, 16]               0
       BatchNorm2d-56         [128, 160, 16, 16]             320
            Conv2d-57         [128, 640, 16, 16]         102,400
       BatchNorm2d-58         [128, 640, 16, 16]           1,280
-             ReLU-59         [128, 640, 16, 16]               0
+            ReLU6-59         [128, 640, 16, 16]               0
            Conv2d-60         [128, 640, 16, 16]           5,760
       BatchNorm2d-61         [128, 640, 16, 16]           1,280
-             ReLU-62         [128, 640, 16, 16]               0
+            ReLU6-62         [128, 640, 16, 16]               0
            Conv2d-63         [128, 160, 16, 16]         102,400
       BatchNorm2d-64         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-65         [128, 160, 16, 16]               0
@@ -74,10 +74,10 @@ UniversalInvertedBottleneckBlock-65         [128, 160, 16, 16]               0
       BatchNorm2d-67         [128, 160, 16, 16]             320
            Conv2d-68         [128, 640, 16, 16]         102,400
       BatchNorm2d-69         [128, 640, 16, 16]           1,280
-             ReLU-70         [128, 640, 16, 16]               0
+            ReLU6-70         [128, 640, 16, 16]               0
            Conv2d-71         [128, 640, 16, 16]          16,000
       BatchNorm2d-72         [128, 640, 16, 16]           1,280
-             ReLU-73         [128, 640, 16, 16]               0
+            ReLU6-73         [128, 640, 16, 16]               0
            Conv2d-74         [128, 160, 16, 16]         102,400
       BatchNorm2d-75         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-76         [128, 160, 16, 16]               0
@@ -85,10 +85,10 @@ UniversalInvertedBottleneckBlock-76         [128, 160, 16, 16]               0
       BatchNorm2d-78         [128, 160, 16, 16]             320
            Conv2d-79         [128, 640, 16, 16]         102,400
       BatchNorm2d-80         [128, 640, 16, 16]           1,280
-             ReLU-81         [128, 640, 16, 16]               0
+            ReLU6-81         [128, 640, 16, 16]               0
            Conv2d-82         [128, 640, 16, 16]           5,760
       BatchNorm2d-83         [128, 640, 16, 16]           1,280
-             ReLU-84         [128, 640, 16, 16]               0
+            ReLU6-84         [128, 640, 16, 16]               0
            Conv2d-85         [128, 160, 16, 16]         102,400
       BatchNorm2d-86         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-87         [128, 160, 16, 16]               0
@@ -96,13 +96,13 @@ UniversalInvertedBottleneckBlock-87         [128, 160, 16, 16]               0
       BatchNorm2d-89         [128, 160, 16, 16]             320
            Conv2d-90         [128, 640, 16, 16]         102,400
       BatchNorm2d-91         [128, 640, 16, 16]           1,280
-             ReLU-92         [128, 640, 16, 16]               0
+            ReLU6-92         [128, 640, 16, 16]               0
            Conv2d-93         [128, 160, 16, 16]         102,400
       BatchNorm2d-94         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-95         [128, 160, 16, 16]               0
            Conv2d-96         [128, 320, 16, 16]          51,200
       BatchNorm2d-97         [128, 320, 16, 16]             640
-             ReLU-98         [128, 320, 16, 16]               0
+            ReLU6-98         [128, 320, 16, 16]               0
            Conv2d-99         [128, 160, 16, 16]          51,200
      BatchNorm2d-100         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-101         [128, 160, 16, 16]               0
@@ -110,7 +110,7 @@ UniversalInvertedBottleneckBlock-101         [128, 160, 16, 16]               0
      BatchNorm2d-103         [128, 160, 16, 16]             320
           Conv2d-104         [128, 640, 16, 16]         102,400
      BatchNorm2d-105         [128, 640, 16, 16]           1,280
-            ReLU-106         [128, 640, 16, 16]               0
+           ReLU6-106         [128, 640, 16, 16]               0
           Conv2d-107         [128, 160, 16, 16]         102,400
      BatchNorm2d-108         [128, 160, 16, 16]             320
 UniversalInvertedBottleneckBlock-109         [128, 160, 16, 16]               0
@@ -118,10 +118,10 @@ UniversalInvertedBottleneckBlock-109         [128, 160, 16, 16]               0
      BatchNorm2d-111         [128, 160, 16, 16]             320
           Conv2d-112         [128, 960, 16, 16]         153,600
      BatchNorm2d-113         [128, 960, 16, 16]           1,920
-            ReLU-114         [128, 960, 16, 16]               0
+           ReLU6-114         [128, 960, 16, 16]               0
           Conv2d-115           [128, 960, 8, 8]          24,000
      BatchNorm2d-116           [128, 960, 8, 8]           1,920
-            ReLU-117           [128, 960, 8, 8]               0
+           ReLU6-117           [128, 960, 8, 8]               0
           Conv2d-118           [128, 256, 8, 8]         245,760
      BatchNorm2d-119           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-120           [128, 256, 8, 8]               0
@@ -129,10 +129,10 @@ UniversalInvertedBottleneckBlock-120           [128, 256, 8, 8]               0
      BatchNorm2d-122           [128, 256, 8, 8]             512
           Conv2d-123          [128, 1024, 8, 8]         262,144
      BatchNorm2d-124          [128, 1024, 8, 8]           2,048
-            ReLU-125          [128, 1024, 8, 8]               0
+           ReLU6-125          [128, 1024, 8, 8]               0
           Conv2d-126          [128, 1024, 8, 8]          25,600
      BatchNorm2d-127          [128, 1024, 8, 8]           2,048
-            ReLU-128          [128, 1024, 8, 8]               0
+           ReLU6-128          [128, 1024, 8, 8]               0
           Conv2d-129           [128, 256, 8, 8]         262,144
      BatchNorm2d-130           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-131           [128, 256, 8, 8]               0
@@ -140,10 +140,10 @@ UniversalInvertedBottleneckBlock-131           [128, 256, 8, 8]               0
      BatchNorm2d-133           [128, 256, 8, 8]             512
           Conv2d-134          [128, 1024, 8, 8]         262,144
      BatchNorm2d-135          [128, 1024, 8, 8]           2,048
-            ReLU-136          [128, 1024, 8, 8]               0
+           ReLU6-136          [128, 1024, 8, 8]               0
           Conv2d-137          [128, 1024, 8, 8]          25,600
      BatchNorm2d-138          [128, 1024, 8, 8]           2,048
-            ReLU-139          [128, 1024, 8, 8]               0
+           ReLU6-139          [128, 1024, 8, 8]               0
           Conv2d-140           [128, 256, 8, 8]         262,144
      BatchNorm2d-141           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-142           [128, 256, 8, 8]               0
@@ -151,16 +151,16 @@ UniversalInvertedBottleneckBlock-142           [128, 256, 8, 8]               0
      BatchNorm2d-144           [128, 256, 8, 8]             512
           Conv2d-145          [128, 1024, 8, 8]         262,144
      BatchNorm2d-146          [128, 1024, 8, 8]           2,048
-            ReLU-147          [128, 1024, 8, 8]               0
+           ReLU6-147          [128, 1024, 8, 8]               0
           Conv2d-148          [128, 1024, 8, 8]          25,600
      BatchNorm2d-149          [128, 1024, 8, 8]           2,048
-            ReLU-150          [128, 1024, 8, 8]               0
+           ReLU6-150          [128, 1024, 8, 8]               0
           Conv2d-151           [128, 256, 8, 8]         262,144
      BatchNorm2d-152           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-153           [128, 256, 8, 8]               0
           Conv2d-154          [128, 1024, 8, 8]         262,144
      BatchNorm2d-155          [128, 1024, 8, 8]           2,048
-            ReLU-156          [128, 1024, 8, 8]               0
+           ReLU6-156          [128, 1024, 8, 8]               0
           Conv2d-157           [128, 256, 8, 8]         262,144
      BatchNorm2d-158           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-159           [128, 256, 8, 8]               0
@@ -168,7 +168,7 @@ UniversalInvertedBottleneckBlock-159           [128, 256, 8, 8]               0
      BatchNorm2d-161           [128, 256, 8, 8]             512
           Conv2d-162          [128, 1024, 8, 8]         262,144
      BatchNorm2d-163          [128, 1024, 8, 8]           2,048
-            ReLU-164          [128, 1024, 8, 8]               0
+           ReLU6-164          [128, 1024, 8, 8]               0
           Conv2d-165           [128, 256, 8, 8]         262,144
      BatchNorm2d-166           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-167           [128, 256, 8, 8]               0
@@ -176,10 +176,10 @@ UniversalInvertedBottleneckBlock-167           [128, 256, 8, 8]               0
      BatchNorm2d-169           [128, 256, 8, 8]             512
           Conv2d-170           [128, 512, 8, 8]         131,072
      BatchNorm2d-171           [128, 512, 8, 8]           1,024
-            ReLU-172           [128, 512, 8, 8]               0
+           ReLU6-172           [128, 512, 8, 8]               0
           Conv2d-173           [128, 512, 8, 8]          12,800
      BatchNorm2d-174           [128, 512, 8, 8]           1,024
-            ReLU-175           [128, 512, 8, 8]               0
+           ReLU6-175           [128, 512, 8, 8]               0
           Conv2d-176           [128, 256, 8, 8]         131,072
      BatchNorm2d-177           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-178           [128, 256, 8, 8]               0
@@ -187,22 +187,22 @@ UniversalInvertedBottleneckBlock-178           [128, 256, 8, 8]               0
      BatchNorm2d-180           [128, 256, 8, 8]             512
           Conv2d-181          [128, 1024, 8, 8]         262,144
      BatchNorm2d-182          [128, 1024, 8, 8]           2,048
-            ReLU-183          [128, 1024, 8, 8]               0
+           ReLU6-183          [128, 1024, 8, 8]               0
           Conv2d-184          [128, 1024, 8, 8]          25,600
      BatchNorm2d-185          [128, 1024, 8, 8]           2,048
-            ReLU-186          [128, 1024, 8, 8]               0
+           ReLU6-186          [128, 1024, 8, 8]               0
           Conv2d-187           [128, 256, 8, 8]         262,144
      BatchNorm2d-188           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-189           [128, 256, 8, 8]               0
           Conv2d-190          [128, 1024, 8, 8]         262,144
      BatchNorm2d-191          [128, 1024, 8, 8]           2,048
-            ReLU-192          [128, 1024, 8, 8]               0
+           ReLU6-192          [128, 1024, 8, 8]               0
           Conv2d-193           [128, 256, 8, 8]         262,144
      BatchNorm2d-194           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-195           [128, 256, 8, 8]               0
           Conv2d-196          [128, 1024, 8, 8]         262,144
      BatchNorm2d-197          [128, 1024, 8, 8]           2,048
-            ReLU-198          [128, 1024, 8, 8]               0
+           ReLU6-198          [128, 1024, 8, 8]               0
           Conv2d-199           [128, 256, 8, 8]         262,144
      BatchNorm2d-200           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-201           [128, 256, 8, 8]               0
@@ -210,7 +210,7 @@ UniversalInvertedBottleneckBlock-201           [128, 256, 8, 8]               0
      BatchNorm2d-203           [128, 256, 8, 8]             512
           Conv2d-204           [128, 512, 8, 8]         131,072
      BatchNorm2d-205           [128, 512, 8, 8]           1,024
-            ReLU-206           [128, 512, 8, 8]               0
+           ReLU6-206           [128, 512, 8, 8]               0
           Conv2d-207           [128, 256, 8, 8]         131,072
      BatchNorm2d-208           [128, 256, 8, 8]             512
 UniversalInvertedBottleneckBlock-209           [128, 256, 8, 8]               0
@@ -225,17 +225,17 @@ GlobalPoolingBlock-215           [128, 960, 1, 1]               0
             ReLU-218          [128, 1280, 1, 1]               0
    Conv2DBNBlock-219          [128, 1280, 1, 1]               0
        MobileNet-220          [128, 1280, 1, 1]               0
-          Conv2d-221          [128, 1000, 1, 1]       1,281,000
-         Flatten-222                [128, 1000]               0
+          Conv2d-221           [128, 100, 1, 1]         128,100
+         Flatten-222                 [128, 100]               0
 ================================================================
-Total params: 9,715,512
-Trainable params: 9,715,512
+Total params: 8,562,612
+Trainable params: 8,562,612
 Non-trainable params: 0
 ----------------------------------------------------------------
 Input size (MB): 96.00
-Forward/backward pass size (MB): 22006.20
-Params size (MB): 37.06
-Estimated Total Size (MB): 22139.26
+Forward/backward pass size (MB): 22004.45
+Params size (MB): 32.66
+Estimated Total Size (MB): 22133.11
 ----------------------------------------------------------------
 
 Detailed layer shapes:
@@ -432,9 +432,9 @@ features.layers.24.pool: torch.Size([128, 960, 1, 1])
 features.layers.25.conv: torch.Size([128, 1280, 1, 1])
 features.layers.25.bn: torch.Size([128, 1280, 1, 1])
 features.layers.25.activation_layer: torch.Size([128, 1280, 1, 1])
-classifier.0: torch.Size([128, 1000, 1, 1])
-classifier.1: torch.Size([128, 1000])
+classifier.0: torch.Size([128, 100, 1, 1])
+classifier.1: torch.Size([128, 100])
 
-Final output shape: torch.Size([128, 1000])
+Final output shape: torch.Size([128, 100])
 ==================================================
 

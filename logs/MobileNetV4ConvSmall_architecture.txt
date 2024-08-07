@@ -29,50 +29,50 @@ Model: MobileNetV4ConvSmall
       BatchNorm2d-22          [128, 64, 27, 27]             128
            Conv2d-23         [128, 192, 27, 27]          12,288
       BatchNorm2d-24         [128, 192, 27, 27]             384
-             ReLU-25         [128, 192, 27, 27]               0
+            ReLU6-25         [128, 192, 27, 27]               0
            Conv2d-26         [128, 192, 14, 14]           4,800
       BatchNorm2d-27         [128, 192, 14, 14]             384
-             ReLU-28         [128, 192, 14, 14]               0
+            ReLU6-28         [128, 192, 14, 14]               0
            Conv2d-29          [128, 96, 14, 14]          18,432
       BatchNorm2d-30          [128, 96, 14, 14]             192
    MNV4LayerScale-31          [128, 96, 14, 14]               0
 UniversalInvertedBottleneckBlock-32          [128, 96, 14, 14]               0
            Conv2d-33         [128, 192, 14, 14]          18,432
       BatchNorm2d-34         [128, 192, 14, 14]             384
-             ReLU-35         [128, 192, 14, 14]               0
+            ReLU6-35         [128, 192, 14, 14]               0
            Conv2d-36         [128, 192, 14, 14]           1,728
       BatchNorm2d-37         [128, 192, 14, 14]             384
-             ReLU-38         [128, 192, 14, 14]               0
+            ReLU6-38         [128, 192, 14, 14]               0
            Conv2d-39          [128, 96, 14, 14]          18,432
       BatchNorm2d-40          [128, 96, 14, 14]             192
    MNV4LayerScale-41          [128, 96, 14, 14]               0
 UniversalInvertedBottleneckBlock-42          [128, 96, 14, 14]               0
            Conv2d-43         [128, 192, 14, 14]          18,432
       BatchNorm2d-44         [128, 192, 14, 14]             384
-             ReLU-45         [128, 192, 14, 14]               0
+            ReLU6-45         [128, 192, 14, 14]               0
            Conv2d-46         [128, 192, 14, 14]           1,728
       BatchNorm2d-47         [128, 192, 14, 14]             384
-             ReLU-48         [128, 192, 14, 14]               0
+            ReLU6-48         [128, 192, 14, 14]               0
            Conv2d-49          [128, 96, 14, 14]          18,432
       BatchNorm2d-50          [128, 96, 14, 14]             192
    MNV4LayerScale-51          [128, 96, 14, 14]               0
 UniversalInvertedBottleneckBlock-52          [128, 96, 14, 14]               0
            Conv2d-53         [128, 192, 14, 14]          18,432
       BatchNorm2d-54         [128, 192, 14, 14]             384
-             ReLU-55         [128, 192, 14, 14]               0
+            ReLU6-55         [128, 192, 14, 14]               0
            Conv2d-56         [128, 192, 14, 14]           1,728
       BatchNorm2d-57         [128, 192, 14, 14]             384
-             ReLU-58         [128, 192, 14, 14]               0
+            ReLU6-58         [128, 192, 14, 14]               0
            Conv2d-59          [128, 96, 14, 14]          18,432
       BatchNorm2d-60          [128, 96, 14, 14]             192
    MNV4LayerScale-61          [128, 96, 14, 14]               0
 UniversalInvertedBottleneckBlock-62          [128, 96, 14, 14]               0
            Conv2d-63         [128, 192, 14, 14]          18,432
       BatchNorm2d-64         [128, 192, 14, 14]             384
-             ReLU-65         [128, 192, 14, 14]               0
+            ReLU6-65         [128, 192, 14, 14]               0
            Conv2d-66         [128, 192, 14, 14]           1,728
       BatchNorm2d-67         [128, 192, 14, 14]             384
-             ReLU-68         [128, 192, 14, 14]               0
+            ReLU6-68         [128, 192, 14, 14]               0
            Conv2d-69          [128, 96, 14, 14]          18,432
       BatchNorm2d-70          [128, 96, 14, 14]             192
    MNV4LayerScale-71          [128, 96, 14, 14]               0
@@ -81,7 +81,7 @@ UniversalInvertedBottleneckBlock-72          [128, 96, 14, 14]               0
       BatchNorm2d-74          [128, 96, 14, 14]             192
            Conv2d-75         [128, 384, 14, 14]          36,864
       BatchNorm2d-76         [128, 384, 14, 14]             768
-             ReLU-77         [128, 384, 14, 14]               0
+            ReLU6-77         [128, 384, 14, 14]               0
            Conv2d-78          [128, 96, 14, 14]          36,864
       BatchNorm2d-79          [128, 96, 14, 14]             192
    MNV4LayerScale-80          [128, 96, 14, 14]               0
@@ -90,10 +90,10 @@ UniversalInvertedBottleneckBlock-81          [128, 96, 14, 14]               0
       BatchNorm2d-83          [128, 96, 14, 14]             192
            Conv2d-84         [128, 576, 14, 14]          55,296
       BatchNorm2d-85         [128, 576, 14, 14]           1,152
-             ReLU-86         [128, 576, 14, 14]               0
+            ReLU6-86         [128, 576, 14, 14]               0
            Conv2d-87           [128, 576, 7, 7]           5,184
       BatchNorm2d-88           [128, 576, 7, 7]           1,152
-             ReLU-89           [128, 576, 7, 7]               0
+            ReLU6-89           [128, 576, 7, 7]               0
            Conv2d-90           [128, 128, 7, 7]          73,728
       BatchNorm2d-91           [128, 128, 7, 7]             256
    MNV4LayerScale-92           [128, 128, 7, 7]               0
@@ -102,50 +102,50 @@ UniversalInvertedBottleneckBlock-93           [128, 128, 7, 7]               0
       BatchNorm2d-95           [128, 128, 7, 7]             256
            Conv2d-96           [128, 512, 7, 7]          65,536
       BatchNorm2d-97           [128, 512, 7, 7]           1,024
-             ReLU-98           [128, 512, 7, 7]               0
+            ReLU6-98           [128, 512, 7, 7]               0
            Conv2d-99           [128, 512, 7, 7]          12,800
      BatchNorm2d-100           [128, 512, 7, 7]           1,024
-            ReLU-101           [128, 512, 7, 7]               0
+           ReLU6-101           [128, 512, 7, 7]               0
           Conv2d-102           [128, 128, 7, 7]          65,536
      BatchNorm2d-103           [128, 128, 7, 7]             256
   MNV4LayerScale-104           [128, 128, 7, 7]               0
 UniversalInvertedBottleneckBlock-105           [128, 128, 7, 7]               0
           Conv2d-106           [128, 512, 7, 7]          65,536
      BatchNorm2d-107           [128, 512, 7, 7]           1,024
-            ReLU-108           [128, 512, 7, 7]               0
+           ReLU6-108           [128, 512, 7, 7]               0
           Conv2d-109           [128, 512, 7, 7]          12,800
      BatchNorm2d-110           [128, 512, 7, 7]           1,024
-            ReLU-111           [128, 512, 7, 7]               0
+           ReLU6-111           [128, 512, 7, 7]               0
           Conv2d-112           [128, 128, 7, 7]          65,536
      BatchNorm2d-113           [128, 128, 7, 7]             256
   MNV4LayerScale-114           [128, 128, 7, 7]               0
 UniversalInvertedBottleneckBlock-115           [128, 128, 7, 7]               0
           Conv2d-116           [128, 384, 7, 7]          49,152
      BatchNorm2d-117           [128, 384, 7, 7]             768
-            ReLU-118           [128, 384, 7, 7]               0
+           ReLU6-118           [128, 384, 7, 7]               0
           Conv2d-119           [128, 384, 7, 7]           9,600
      BatchNorm2d-120           [128, 384, 7, 7]             768
-            ReLU-121           [128, 384, 7, 7]               0
+           ReLU6-121           [128, 384, 7, 7]               0
           Conv2d-122           [128, 128, 7, 7]          49,152
      BatchNorm2d-123           [128, 128, 7, 7]             256
   MNV4LayerScale-124           [128, 128, 7, 7]               0
 UniversalInvertedBottleneckBlock-125           [128, 128, 7, 7]               0
           Conv2d-126           [128, 512, 7, 7]          65,536
      BatchNorm2d-127           [128, 512, 7, 7]           1,024
-            ReLU-128           [128, 512, 7, 7]               0
+           ReLU6-128           [128, 512, 7, 7]               0
           Conv2d-129           [128, 512, 7, 7]           4,608
      BatchNorm2d-130           [128, 512, 7, 7]           1,024
-            ReLU-131           [128, 512, 7, 7]               0
+           ReLU6-131           [128, 512, 7, 7]               0
           Conv2d-132           [128, 128, 7, 7]          65,536
      BatchNorm2d-133           [128, 128, 7, 7]             256
   MNV4LayerScale-134           [128, 128, 7, 7]               0
 UniversalInvertedBottleneckBlock-135           [128, 128, 7, 7]               0
           Conv2d-136           [128, 512, 7, 7]          65,536
      BatchNorm2d-137           [128, 512, 7, 7]           1,024
-            ReLU-138           [128, 512, 7, 7]               0
+           ReLU6-138           [128, 512, 7, 7]               0
           Conv2d-139           [128, 512, 7, 7]           4,608
      BatchNorm2d-140           [128, 512, 7, 7]           1,024
-            ReLU-141           [128, 512, 7, 7]               0
+           ReLU6-141           [128, 512, 7, 7]               0
           Conv2d-142           [128, 128, 7, 7]          65,536
      BatchNorm2d-143           [128, 128, 7, 7]             256
   MNV4LayerScale-144           [128, 128, 7, 7]               0
@@ -161,17 +161,17 @@ GlobalPoolingBlock-151           [128, 960, 1, 1]               0
             ReLU-154          [128, 1280, 1, 1]               0
    Conv2DBNBlock-155          [128, 1280, 1, 1]               0
        MobileNet-156          [128, 1280, 1, 1]               0
-          Conv2d-157          [128, 1000, 1, 1]       1,281,000
-         Flatten-158                [128, 1000]               0
+          Conv2d-157           [128, 100, 1, 1]         128,100
+         Flatten-158                 [128, 100]               0
 ================================================================
-Total params: 3,774,024
-Trainable params: 3,774,024
+Total params: 2,621,124
+Trainable params: 2,621,124
 Non-trainable params: 0
 ----------------------------------------------------------------
 Input size (MB): 73.50
-Forward/backward pass size (MB): 6445.20
-Params size (MB): 14.40
-Estimated Total Size (MB): 6533.10
+Forward/backward pass size (MB): 6443.45
+Params size (MB): 10.00
+Estimated Total Size (MB): 6526.94
 ----------------------------------------------------------------
 
 Detailed layer shapes:
@@ -310,9 +310,9 @@ features.layers.18.pool: torch.Size([128, 960, 1, 1])
 features.layers.19.conv: torch.Size([128, 1280, 1, 1])
 features.layers.19.bn: torch.Size([128, 1280, 1, 1])
 features.layers.19.activation_layer: torch.Size([128, 1280, 1, 1])
-classifier.0: torch.Size([128, 1000, 1, 1])
-classifier.1: torch.Size([128, 1000])
+classifier.0: torch.Size([128, 100, 1, 1])
+classifier.1: torch.Size([128, 100])
 
-Final output shape: torch.Size([128, 1000])
+Final output shape: torch.Size([128, 100])
 ==================================================
 
