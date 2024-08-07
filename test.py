@@ -9,7 +9,7 @@ import os
 BATCH_SIZE = 128
 
 class MobileNetV4WithClassifier(nn.Module):
-    def __init__(self, model_name, num_classes=100, dropout_rate=0.2, input_size=(3, 224, 224)):
+    def __init__(self, model_name, num_classes=1000, dropout_rate=0.2, input_size=(3, 224, 224)):
         super(MobileNetV4WithClassifier, self).__init__()
         self.features = build_mobilenet(model_name, input_specs=input_size)
         
