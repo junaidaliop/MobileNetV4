@@ -2,11 +2,12 @@ import torch
 import torch.nn as nn
 from typing import Any, List, Tuple, Optional
 from dataclasses import dataclass, fields, astuple
-from collections import OrderedDict
 
-from nn_blocks import (Conv2DBNBlock, DepthwiseSeparableConvBlock, FusedInvertedBottleneckBlock,
-                       UniversalInvertedBottleneckBlock, MultiHeadSelfAttentionBlock, GlobalPoolingBlock,
-                       round_filters, make_divisible, StochasticDepth, get_stochastic_depth_rate)
+from nn_blocks import (
+    Conv2DBNBlock, DepthwiseSeparableConvBlock, FusedInvertedBottleneckBlock,
+    UniversalInvertedBottleneckBlock, MultiHeadSelfAttentionBlock, GlobalPoolingBlock,
+    round_filters, make_divisible, StochasticDepth, get_stochastic_depth_rate
+)
 
 @dataclass
 class BlockSpec:
@@ -84,9 +85,6 @@ def block_spec_decoder(specs: dict[str, Any], filter_size_scale: float, divisibl
     decoded_specs = []
     for s in block_specs:
         spec_dict = dict(zip(block_spec_schema, s))
-        # # Ensure strides is always an integer, default to 1 if not specified
-        # if 'strides' in spec_dict and spec_dict['strides'] is None:
-        #     spec_dict['strides'] = 1
         decoded_specs.append(BlockSpec(**spec_dict))
 
     if spec_name != 'MobileNetV1' and finegrain_classification_mode and filter_size_scale < 1.0:
@@ -98,14 +96,7 @@ def block_spec_decoder(specs: dict[str, Any], filter_size_scale: float, divisibl
 
     return decoded_specs
 
-"""
-Architecture: https://arxiv.org/abs/2404.10518
 
-"MobileNetV4 - Universal Models for the Mobile Ecosystem"
-Danfeng Qin, Chas Leichner, Manolis Delakis, Marco Fornoni, Shixin Luo, Fan
-Yang, Weijun Wang, Colby Banbury, Chengxi Ye, Berkin Akin, Vaibhav Aggarwal,
-Tenghui Zhu, Daniele Moro, Andrew Howard
-"""
 MNV4ConvSmall_BLOCK_SPECS = {
     'spec_name': 'MobileNetV4ConvSmall',
     'block_spec_schema': [
@@ -495,7 +486,6 @@ def _mnv4_hybrid_large_block_specs():
         uib(3, 5, 1, 192),
         uib(5, 3, 1, 192),
         uib(5, 3, 1, 192),
-        # add attention blocks to 2nd last stage
         mhsa_24px(),
         uib(5, 3, 1, 192),
         mhsa_24px(),
@@ -504,7 +494,6 @@ def _mnv4_hybrid_large_block_specs():
         uib(5, 3, 1, 192),
         mhsa_24px(),
         uib(3, 0, 1, 192, output=True),
-        # last stage
         uib(5, 5, 2, 512),
         uib(5, 5, 1, 512),
         uib(5, 5, 1, 512),
@@ -603,6 +592,7 @@ class MobileNet(nn.Module):
         rate = 1
         num_blocks = len(self.decoded_specs)
         input_channels = self.input_specs[0]
+
         for block_idx, block_def in enumerate(self.decoded_specs):
             block_stride = 1 if block_def.strides is None else block_def.strides
 
@@ -645,8 +635,8 @@ class MobileNet(nn.Module):
                 ))
                 input_channels = block_def.filters
 
-
             elif block_def.block_fn == 'mhsa':
+                # print(f"MultiHeadSelfAttentionBlock input channels: {input_channels}, output channels: {block_def.filters}")
                 block = MultiHeadSelfAttentionBlock(
                     input_dim=input_channels,
                     output_dim=block_def.filters,
@@ -658,9 +648,10 @@ class MobileNet(nn.Module):
                     query_w_strides=block_def.query_w_strides,
                     kv_strides=block_def.kv_strides,
                     downsampling_dw_kernel_size=block_def.downsampling_dw_kernel_size,
+                    dropout=0.0,
                     use_bias=False,
-                    use_cpe=True,
-                    cpe_dw_kernel_size=block_def.kernel_size,
+                    use_cpe=block_def.use_cpe if hasattr(block_def, 'use_cpe') else False,
+                    cpe_dw_kernel_size=block_def.kernel_size if hasattr(block_def, 'kernel_size') else 3,
                     stochastic_depth_drop_rate=stochastic_depth_drop_rate,
                     use_residual=block_def.use_residual,
                     use_sync_bn=self.use_sync_bn,
@@ -690,19 +681,21 @@ class MobileNet(nn.Module):
                 layers.append(UniversalInvertedBottleneckBlock(
                     in_channels=input_channels,
                     out_channels=block_def.filters,
-                    stride=layer_stride,
                     expand_ratio=block_def.expand_ratio,
-                    activation=block_def.activation,
-                    use_residual=block_def.use_residual,
+                    strides=layer_stride,  # Changed from 'stride' to 'strides'
                     middle_dw_downsample=block_def.middle_dw_downsample,
                     start_dw_kernel_size=block_def.start_dw_kernel_size,
                     middle_dw_kernel_size=block_def.middle_dw_kernel_size,
                     end_dw_kernel_size=block_def.end_dw_kernel_size,
-                    use_layer_scale=block_def.use_layer_scale,
                     stochastic_depth_drop_rate=stochastic_depth_drop_rate,
+                    activation=block_def.activation,
+                    use_residual=block_def.use_residual,
+                    use_layer_scale=block_def.use_layer_scale,
+                    layer_scale_init_value=1e-5,  # You may want to make this configurable
                     norm_momentum=self.norm_momentum,
                     norm_epsilon=self.norm_epsilon,
-                    divisible_by=self.divisible_by
+                    divisible_by=self.divisible_by,
+                    dilation_rate=use_rate  # Added dilation_rate
                 ))
                 input_channels = block_def.filters
 
@@ -718,7 +711,19 @@ class MobileNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        x = self.layers(x)
+        endpoints = {}
+        for idx, layer in enumerate(self.layers):
+            if isinstance(layer, MultiHeadSelfAttentionBlock) and self.output_intermediate_endpoints:
+                x, intermediate_endpoints = layer(x)
+                endpoints.update(intermediate_endpoints)
+            else:
+                x = layer(x)
+            
+            if self.output_intermediate_endpoints:
+                endpoints[f'block_{idx}'] = x
+
+        if self.output_intermediate_endpoints:
+            return x, endpoints
         return x
 
     @property

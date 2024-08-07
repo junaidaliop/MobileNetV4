@@ -5,10 +5,11 @@ from torchsummary import summary
 import sys
 import os
 
+# BATCH_SIZE = 2 FOR SMALL.
 BATCH_SIZE = 128
 
 class MobileNetV4WithClassifier(nn.Module):
-    def __init__(self, model_name, num_classes=1000, input_size=(3, 224, 224)):
+    def __init__(self, model_name, num_classes=100, dropout_rate=0.2, input_size=(3, 224, 224)):
         super(MobileNetV4WithClassifier, self).__init__()
         self.features = build_mobilenet(model_name, input_specs=input_size)
         
@@ -18,10 +19,8 @@ class MobileNetV4WithClassifier(nn.Module):
             num_features = features.shape[1]
         
         self.classifier = nn.Sequential(
-            nn.Flatten(),
-            nn.Linear(num_features, 1024),
-            nn.ReLU(inplace=True),
-            nn.Linear(1024, num_classes)
+            nn.Conv2d(1280, num_classes, kernel_size=1),
+            nn.Flatten()
         )
 
     def forward(self, x):
@@ -41,7 +40,7 @@ def print_model_structure(model_name, input_shape=(3, 224, 224)):
         print(f"{'='*50}")
         
         try:
-            model = MobileNetV4WithClassifier(model_name, num_classes=1000, input_size=input_shape)
+            model = MobileNetV4WithClassifier(model_name, num_classes=100, input_size=input_shape)
             model.eval()
             
             summary(model, input_shape, device="cpu", batch_size=BATCH_SIZE)

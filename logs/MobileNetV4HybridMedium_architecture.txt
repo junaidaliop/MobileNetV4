@@ -327,19 +327,17 @@ GlobalPoolingBlock-317           [128, 960, 1, 1]               0
             ReLU-320          [128, 1280, 1, 1]               0
    Conv2DBNBlock-321          [128, 1280, 1, 1]               0
        MobileNet-322          [128, 1280, 1, 1]               0
-         Flatten-323                [128, 1280]               0
-          Linear-324                [128, 1024]       1,311,744
-            ReLU-325                [128, 1024]               0
-          Linear-326                [128, 1000]       1,025,000
+          Conv2d-323          [128, 1000, 1, 1]       1,281,000
+         Flatten-324                [128, 1000]               0
 ================================================================
-Total params: 11,485,496
-Trainable params: 11,485,496
+Total params: 10,429,752
+Trainable params: 10,429,752
 Non-trainable params: 0
 ----------------------------------------------------------------
 Input size (MB): 96.00
-Forward/backward pass size (MB): 24776.48
-Params size (MB): 43.81
-Estimated Total Size (MB): 24916.29
+Forward/backward pass size (MB): 24774.20
+Params size (MB): 39.79
+Estimated Total Size (MB): 24909.99
 ----------------------------------------------------------------
 
 Detailed layer shapes:
@@ -625,10 +623,8 @@ features.layers.33.pool: torch.Size([128, 960, 1, 1])
 features.layers.34.conv: torch.Size([128, 1280, 1, 1])
 features.layers.34.bn: torch.Size([128, 1280, 1, 1])
 features.layers.34.activation_layer: torch.Size([128, 1280, 1, 1])
-classifier.0: torch.Size([128, 1280])
-classifier.1: torch.Size([128, 1024])
-classifier.2: torch.Size([128, 1024])
-classifier.3: torch.Size([128, 1000])
+classifier.0: torch.Size([128, 1000, 1, 1])
+classifier.1: torch.Size([128, 1000])
 
 Final output shape: torch.Size([128, 1000])
 ==================================================
